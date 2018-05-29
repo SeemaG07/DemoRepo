@@ -8,7 +8,7 @@ COPY SampleCoreApp.sln ./
 COPY SampleCoreApp.csproj ./
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
-WORKDIR /src/SampleCoreApp
+WORKDIR /src
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
