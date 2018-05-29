@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  samplecoreapp:
+    image: samplecoreapp
+    build:
+      context: .
+      dockerfile: SampleCoreApp\Dockerfile

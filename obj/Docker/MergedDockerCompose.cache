@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  samplecoreapp:
+    build:
+      context: C:\Users\SFTest\source\repos\SampleCoreApp\SampleCoreApp
+      dockerfile: SampleCoreApp\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: samplecoreapp
+    ports:
+    - 80/tcp
+version: '3.0'
