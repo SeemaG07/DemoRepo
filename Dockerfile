@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
 WORKDIR /src
 COPY SampleCoreApp.sln ./
-COPY SampleCoreApp/SampleCoreApp.csproj SampleCoreApp/
+COPY SampleCoreApp.csproj ./
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
 WORKDIR /src/SampleCoreApp
